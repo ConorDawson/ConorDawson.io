@@ -1,139 +1,92 @@
-body{
-    background-color: #ffffff;
-font-family: 'Lato', sans-serif;
-
-
-
+body {
+    background-color: #f0f0f0; /* Light Gray */
+    font-family: 'Lato', sans-serif;
 }
 
-.backgroundDiv{
-background-color: #f0f0f0;
-width: 80%;
-margin-left:10%;
+.backgroundDiv {
+    background-color: f0f0f0; /* White */
+    width: 80%;
+    margin: 0 auto; /* Center the content */
 }
-.headDiv{
-    background-color: #000080; /* Navy Blue */
+
+.headDiv {
+    background-color: #333; /* Dark Gray */
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20%; /* Add padding to the sides */
-    padding-top:10px;
-    padding-bottom:0%;
-    width:40%;
-    margin-left:10%;
-    border-radius: 15px; /* Adds 15px radius to all four corners */
-
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.topRow {
+
+.topRow, .bottomRow {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    padding: 20%; /* Add padding to the sides */
-    padding-top:10px;
-    padding-bottom:0%;
-
+    padding: 20px;
 }
 
-.bottomRow{
-          display: flex;
-           justify-content: space-between;
-           align-items: center;
-           padding: 20%; /* Add padding to the sides */
-           padding-top:5px;
-               padding-bottom:0%;
+iframe {
+    width: 100%;
+    height: 350px;
 }
 
-iframe{
-width:100%;
-height: 350px;
-}
 /* Optional styles for individual elements */
-.details {
-        background-color: #ffffff;
+.details, .map {
+    background-color: #fff;
     flex: 1;
     padding: 10px;
     text-align: center;
-    border-radius: 15px; /* Adds 15px radius to all four corners */
-
-}
-
-.map {
-    width: 50%;
-    flex: 1;
-    padding: 10px;
-    border-radius: 15px; /* Adds 15px radius to all four corners */
-
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Additional styling for the "Get Directions" button */
 .direction-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0077b5;
+    background-color: #333; /* Dark Gray */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
     font-weight: bold;
 }
 
 .direction-link:hover {
-    background-color: #00548f;
+    background-color: #555; /* Slightly Darker Gray */
 }
 
-
-/* Media query for screens smaller than 600px (typical for phones) */
+/* Media query for screens smaller than 900px */
 @media (max-width: 900px) {
-
-        .backgroundDiv{
+    .backgroundDiv {
         background-color: #f0f0f0;
         width: 100%;
-        margin-left:0%;
-        }
+        margin: 0;
+    }
 
+    .headDiv {
+        background-color: #333; /* Dark Gray */
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-
-        .headDiv{
-            background-color: #000080; /* Navy Blue */
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0%; /* Add padding to the sides */
-            padding-top:0px;
-            padding-bottom:0%;
-            width:100%;
-            margin-left:0%;
-            border-radius: 5px; /* Adds 15px radius to all four corners */
-
-        }
-
-
-
-    .topRow {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
+    .topRow, .bottomRow {
+        flex-direction: column;
         text-align: center;
         justify-content: space-between;
         align-items: center;
-        padding: 5%; /* Add padding to the sides */
-
-
-    }
-
-    .bottomRow{
-              flex-direction: column; /* Stack elements vertically on smaller screens */
-                      text-align: center;
-                      justify-content: space-between;
-                      align-items: center;
-
-               padding: 5%; /* Add padding to the sides */
-
+        padding: 5%;
     }
 
     .details, .map {
-        flex: none; /* Reset flex property to default (no flex) */
-        width: 90%; /* Make elements take full width */
-        padding: 5%;  /* Remove padding for full width */
+        flex: none;
+        width: 90%;
+        padding: 5%;
     }
 }
