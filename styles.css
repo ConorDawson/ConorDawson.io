@@ -1,51 +1,139 @@
-/* Reset some default browser styles */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
+body{
+    background-color: #ffffff;
+font-family: 'Lato', sans-serif;
+
+
+
 }
 
-/* Basic styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-
-
-header {
-    background-color: #333;
+.backgroundDiv{
+background-color: #f0f0f0;
+width: 80%;
+margin-left:10%;
+}
+.headDiv{
+    background-color: #000080; /* Navy Blue */
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20%; /* Add padding to the sides */
+    padding-top:10px;
+    padding-bottom:0%;
+    width:40%;
+    margin-left:10%;
+    border-radius: 15px; /* Adds 15px radius to all four corners */
+
+}
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20%; /* Add padding to the sides */
+    padding-top:10px;
+    padding-bottom:0%;
+
+}
+
+.bottomRow{
+          display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 20%; /* Add padding to the sides */
+           padding-top:5px;
+               padding-bottom:0%;
+}
+
+iframe{
+width:100%;
+height: 350px;
+}
+/* Optional styles for individual elements */
+.details {
+        background-color: #ffffff;
+    flex: 1;
+    padding: 10px;
     text-align: center;
-    padding: 1rem;
+    border-radius: 15px; /* Adds 15px radius to all four corners */
+
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
+.map {
+    width: 50%;
+    flex: 1;
+    padding: 10px;
+    border-radius: 15px; /* Adds 15px radius to all four corners */
+
 }
 
-section {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 1rem;
-}
-
-h2 {
-    color: #333;
-}
-
-/* Styling for the "My Portfolio" section */
-.project {
-    margin-top: 15px;
-}
-
-/* Link styling */
-a {
-    color: #007BFF;
+/* Additional styling for the "Get Directions" button */
+.direction-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+.direction-link:hover {
+    background-color: #00548f;
+}
+
+
+/* Media query for screens smaller than 600px (typical for phones) */
+@media (max-width: 900px) {
+
+        .backgroundDiv{
+        background-color: #f0f0f0;
+        width: 100%;
+        margin-left:0%;
+        }
+
+
+
+        .headDiv{
+            background-color: #000080; /* Navy Blue */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0%; /* Add padding to the sides */
+            padding-top:0px;
+            padding-bottom:0%;
+            width:100%;
+            margin-left:0%;
+            border-radius: 5px; /* Adds 15px radius to all four corners */
+
+        }
+
+
+
+    .topRow {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5%; /* Add padding to the sides */
+
+
+    }
+
+    .bottomRow{
+              flex-direction: column; /* Stack elements vertically on smaller screens */
+                      text-align: center;
+                      justify-content: space-between;
+                      align-items: center;
+
+               padding: 5%; /* Add padding to the sides */
+
+    }
+
+    .details, .map {
+        flex: none; /* Reset flex property to default (no flex) */
+        width: 90%; /* Make elements take full width */
+        padding: 5%;  /* Remove padding for full width */
+    }
 }
